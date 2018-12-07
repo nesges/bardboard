@@ -31,7 +31,7 @@ It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates sh
 * add ```<li onclick="play(this, 'path/soundfilename')">title</li>``` under a ```<ul class="tracklist">``` element. Replace "ath/soundfilename" with the actual path to your soundfile and "title" with some title that should be displayed. (e.g. ```<li onclick="play(this, 'music/Marcos_H_Bolanos_-_06_-_The_Dream.mp3')">The Dream</li>``` or ```<li onclick="play(this, '../../music/Marcos H Bolanos/Unchained Melodies/Marcos_H_Bolanos_-_06_-_The_Dream.mp3')">The Dream</li>```)
 
 ### advanced options for music tracks
-The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'STARTAT', 'STOPAT'
+The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'STARTAT', 'STOPAT')```
 * this: mandatory, don't change it
 * FILENAME: the path to your music file (mandatory, see above)
 * TITLE: a title to display instead of the filename (optional, default: null)
