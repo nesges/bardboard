@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Bardboard</title>
+              
+        <!-- to change the font load it here and assign it in the body css below -->
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Comfortaa', cursive;
+            }
+        </style>
+        <!-- img css defines the size of effect and mute buttons -->
+        <style>
+            img {
+                height:99px;
+                width:99px;
+            }
+        </style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="lib/bardboard.css" rel="stylesheet">
+        <script src="lib/bardboard.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    </head>
+    <body>
+        <!-- to create a new tab, first create a <button> that calls tab(this, 'PAGEID')
+             replace PAGEID with the actual ID of a <div id='PAGEID'> defined below -->
+        <div class="tabs">
+            <button onClick="tab(this, 'pageFX')">      FX      </button>
+            <button onClick="tab(this, 'pageAmbient')"> Ambient </button>
+            <!-- you may place normal links here to e.g. a second bardboard -->
+            <a href="bardboard2.html">2nd Board</a>
+        </div>       
+        
+        <!-- to create a new tab, first create a <button> (see above) and then create
+             a new <div> with the same PAGEID and class 'tab' -->
+        <div id="pageFX" class="tab">
+            <!-- the mute button stops all audio elements under the same tab -->
+            <img class="mutebutton nofloat"></img>
+            <!-- 
+                 1.) place your soundeffect files under fx/
+                 2.) place your images under img/
+                 3.) imagefilename = soundfilename + .jpg (e.g. soundfile "bam.mp3" -> imagefile "bam.mp3.jpg")
+                 4.) supply a filename as id to the audio-tag
+                 5.) optional: set loop="true" if you want the effect to loop (default: false)
+                     optional: set data-volume="###" with ### between 0 and 100 if you want to lower it's volume (default: 100)
+            -->
+            <audio id="rage_of_blades-Blaga_Saun-1763516257.mp3"></audio>
+            <audio id="European_Dragon_Roaring_and_breathe_fire-daniel-simon.mp3"></audio>
+            <audio id="Evil_Laugh_1-Timothy-64737261.mp3"></audio>
+            <!-- loop=true -->
+            <audio id="heavy-rain-daniel_simon.mp3" loop="true"></audio>
+        </div>
+        
+        <div id="pageAmbient" class="tab">
+            <!-- this creates a mutebutton and a volume control that float on the right side of your board -->
+            <img class="mutebutton"></img>
+            <div class="volume"></div>
+            <div class="audioplayer"><audio loop="true" controls class="nofx"/></div>
+            <ul class="tracklist">
+                <!-- put all your tracks in this list -->
+                <li onclick="play(this, 'music/bensound-epic.mp3')">                        EPIC</li>
+                <li onclick="play(this, 'music/Marcos_H_Bolanos_-_06_-_The_Dream.mp3')">    The Dream</li>
+                <li onclick="play(this, 'music/Thorn1_-_03_-_Stun.mp3')">                   Stun</li>
+            </ul>
+        </div>
+
+        <script>
+            initialize();
+        </script>
+        
+        <footer style="margin-top:15px">
+            <a href="credits.html">Credits</a>
+        </footer>
+    </body>
+</html>
