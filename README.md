@@ -4,6 +4,8 @@ bardboard provides some simpler measures to create a browser based soundboard fo
 
 ![screenshot](screenshots/screenshot_fx.png?raw=true)
 
+Demo: http://nesges.eu/bardboard/bardboard/bardboard.html
+
 ## Installation
 
 Download bardboard ("Clone or download" -&gt; "Download Zip" or checkout) and follow the instructions in "bardboard/bardboard.html". non-tech savvy people might be scared by editing html but it's really not that hard. try it! :-) 
