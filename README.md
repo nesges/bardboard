@@ -23,11 +23,14 @@ It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates sh
 
 * add a ```<button onClick="tab(this, 'PAGEID')">TITLE</button>``` element to ```<div class="tabs">``` and replace PAGEID with some unique term to identify the tab and TITLE with sine title that should be displayed (e.g. ```<button onClick="tab(this, 'pageFX')">FX</button>```)
 * if you want to add a new tab with effectbuttons add
+```
         <div id="PAGEID" class="tab">
             <img class="mutebutton nofloat"></img>
             <audio ... ></audio> 
         </div>
+```
 * if you want to add a new tab with music add
+```
         <div id="PAGEID" class="tab">
             <img class="mutebutton"></img>
             <div class="volume"></div>
@@ -36,6 +39,7 @@ It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates sh
                 <li ... > ... </li>
             </ul>
         </div>
+```
 
 here are some screenshots of my own installation (which is not included for obvious copyright reasons):
 
