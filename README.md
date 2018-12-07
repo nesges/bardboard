@@ -23,7 +23,7 @@ It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates sh
 * if you want to lower it's volume add ```data-volume="X"```, with X between 0 and 100 to the audio tag (e.g. ```<audio id="thunder.mp3" loop="true" data-volume="50"></audio>```)
 
 ### advanced options for effect buttons
-* ```data-path="path/to/soundfile"```the soundeffect is loaded from the specified path and not from fx/ID. The image must still be img/ID.jpg
+* ```data-path="path/to/soundfile"```the soundeffect is loaded from the specified path and not from fx/ID. The image must still be img/ID.jpg. You still have to provide the ```id='ID'``` attribute, but you can name "ID" whatever you want
 * ```data-startat="X.Y"``` starts playback at X.Y (e.g. ```data-startat=23.5``` starts playback at 23s 5ms)
 * ```data-stopat="X.Y"``` stops playback at or after X.Y (e.g. ```data-startat=32.8``` stops playback at 32s 9ms). the exact stopping point may vary a few ms
 
