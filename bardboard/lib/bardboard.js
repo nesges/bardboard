@@ -59,7 +59,11 @@ function initialize() {
                     button.classList.add('paused');
                     button.classList.remove('playing');
                 }
-                this.currentTime=0;
+                if(this.getAttribute('data-startat')) {
+                    this.currentTime= this.getAttribute('data-startat');
+                } else {
+                    this.currentTime=0;
+                }
             });
             
             // set volume
@@ -88,7 +92,11 @@ function initialize() {
                     var stopat = audio.getAttribute('data-stopat')*1;
                     if(audio.currentTime >= stopat) {
                         audio.pause();
-                        audio.currentTime = 0;
+                        if(audio.getAttribute('data-startat')) {
+                            audio.currentTime= audio.getAttribute('data-startat');
+                        } else {
+                            audio.currentTime = 0;
+                        }
                     }
                 };
             }
@@ -186,7 +194,11 @@ function mute(elem, stop) {
         if(isAncestor(audio, tab)) {
             audio.pause();
             if(stop != 'undefined' || stop==1) {
-                audio.currentTime=0;
+                if(audio.getAttribute('data-startat')) {
+                    audio.currentTime= audio.getAttribute('data-startat');
+                } else {
+                    audio.currentTime=0;
+                }
             }
         }
     }
@@ -225,7 +237,7 @@ function play(elem, file, title, startat, stopat) {
     if(!startat || startat == 'undefined') {
         startat = 0;
     }
-        
+
     var audio;
     var audiofound=0;
     var titlefound=0;
@@ -238,6 +250,7 @@ function play(elem, file, title, startat, stopat) {
             audioplayerSource(audio, file);
             audio.load();
             audio.currentTime = startat;
+            audio.setAttribute('data-startat', startat);
             audio.play();
             audiofound++;
         } else if(children[c].nodeName == 'DIV') {
@@ -259,6 +272,7 @@ function play(elem, file, title, startat, stopat) {
         audioplayerSource(audio, file);
         audio.load();
         audio.currentTime = startat;
+        audio.setAttribute('data-startat', startat);
         audio.play();
     }
     
@@ -270,7 +284,11 @@ function play(elem, file, title, startat, stopat) {
             var stopat = audio.getAttribute('stopat')*1;
             if(audio.currentTime >= stopat) {
                 audio.pause();
-                audio.currentTime = 0;
+                if(audio.getAttribute('data-startat')) {
+                    audio.currentTime= audio.getAttribute('data-startat');
+                } else {
+                    audio.currentTime=0;
+                }
             }
         };
     }
