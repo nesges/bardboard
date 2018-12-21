@@ -4,7 +4,13 @@ bardboard provides some simpler measures to create a browser based soundboard fo
 
 ![screenshot](screenshots/screenshot_fx.png?raw=true)
 
-Demo: http://nesges.eu/bardboard/bardboard/bardboard.html
+## Video-Demo
+
+[![demovideo](https://img.youtube.com/vi/04VKqXPdKuw/maxresdefault.jpg)](https://youtu.be/04VKqXPdKuw)
+
+## Live-Demo
+
+http://nesges.eu/bardboard/bardboard/bardboard.html
 
 ## Installation
 
@@ -14,7 +20,7 @@ You can edit and test bardboard on your desktop PC. When you're done and ready, 
 
 It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates should be fine. I recommend [Fully](https://play.google.com/store/apps/details?id=de.ozerov.fully) on Android.
 
-## Howto add an effect button
+### Howto add an effect button
 
 * copy your soundfile to "bardboard/fx" (e.g. "thunder.mp3")
 * copy a jpg image to "bardboard/img". The image needs to have the same name as the soundfile + '.jpg' (e.g. "thunder.mp3.jpg")
@@ -22,17 +28,17 @@ It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates sh
 * if you want it to loop add ```loop="true"``` to the audio tag (e.g. ```<audio id="thunder.mp3" loop="true"></audio>```)
 * if you want to lower it's volume add ```data-volume="X"```, with X between 0 and 100 to the audio tag (e.g. ```<audio id="thunder.mp3" loop="true" data-volume="50"></audio>```)
 
-### advanced options for effect buttons
+#### advanced options for effect buttons
 * ```data-path="path/to/soundfile"```the soundeffect is loaded from the specified path and not from fx/ID. The image must still be img/ID.jpg. You still have to provide the ```id='ID'``` attribute, but you can name "ID" whatever you want
 * ```data-startat="X.Y"``` starts playback at X.Y (e.g. ```data-startat=23.5``` starts playback at 23s 5ms)
 * ```data-stopat="X.Y"``` stops playback at or after X.Y (e.g. ```data-startat=32.8``` stops playback at 32s 9ms). the exact stopping point may vary a few ms
 
-## Howto add a music track
+### Howto add a music track
 
 * copy your soundfile to "bardboard/music" or any other folder (relative folders outside of your bardboard installation are fine)
 * add ```<li onclick="play(this, 'path/soundfilename')">title</li>``` under a ```<ul class="tracklist">``` element. Replace "ath/soundfilename" with the actual path to your soundfile and "title" with some title that should be displayed. (e.g. ```<li onclick="play(this, 'music/Marcos_H_Bolanos_-_06_-_The_Dream.mp3')">The Dream</li>``` or ```<li onclick="play(this, '../../music/Marcos H Bolanos/Unchained Melodies/Marcos_H_Bolanos_-_06_-_The_Dream.mp3')">The Dream</li>```)
 
-### advanced options for music tracks
+#### advanced options for music tracks
 The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'STARTAT', 'STOPAT')```
 * this: mandatory, don't change it
 * FILENAME: the path to your music file (mandatory, see above)
@@ -40,7 +46,7 @@ The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'S
 * STARTAT: starts playback at X.Y (e.g. ```23.5``` starts playback at 23s 5ms) (optional, default: 0)
 * STOPAT: stops playback at or after X.Y (e.g. ```32.8``` stops playback at 32s 9ms). the exact stopping point may vary a few ms (optional, default: end of track)
 
-## Howto add a new tab
+### Howto add a new tab
 
 * add a ```<button onClick="tab(this, 'PAGEID')">TITLE</button>``` element to ```<div class="tabs">``` and replace PAGEID with some unique term to identify the tab and TITLE with sine title that should be displayed (e.g. ```<button onClick="tab(this, 'pageFX')">FX</button>```)
 * if you want to add a new tab with effectbuttons add
