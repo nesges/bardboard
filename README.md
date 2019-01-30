@@ -1,6 +1,6 @@
 # bardboard
 
-bardboard provides some simpler measures to create a browser based soundboard for sound effects and music without the need to have an online connection or even a running webserver. 
+bardboard provides some simple measures to create a browser based soundboard for sound effects and music. And you don't need to have an online connection or even a running webserver to use bardboard.
 
 ![screenshot](screenshots/screenshot_fx.png?raw=true)
 
@@ -14,7 +14,7 @@ http://nesges.eu/bardboard/bardboard/bardboard.html
 
 ## Installation
 
-Download bardboard ("Clone or download" -&gt; "Download Zip" or checkout) and follow the instructions in "bardboard/bardboard.html". non-tech savvy people might be scared by editing html but it's really not that hard. try it! :-) 
+Download bardboard ("Clone or download" -&gt; "Download Zip" or checkout) and follow the instructions in "bardboard/bardboard.html".  Non-tech savvy people might be scared of editing html but it's really not that hard. try it! :-) Instructions are provided as html comments (```<!-- this is such a comment -->```), see "bardboard/demo2.html" if you prefer a cleaner base to start of.
 
 You can edit and test bardboard on your desktop PC. When you're done and ready, just copy the "bardboard" folder to your mobile device, point your browser to bardboard.html and you're good to go. 
 
