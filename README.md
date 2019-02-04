@@ -18,7 +18,7 @@ Download bardboard ("Clone or download" -&gt; "Download Zip" or checkout) and fo
 
 You can edit and test bardboard on your desktop PC. When you're done and ready, just copy the "bardboard" folder to your mobile device, point your browser to bardboard.html and you're good to go. 
 
-It doesn't work in Internet Explorer, but Chrome, Firefox and their derivates should be fine. I recommend [Fully](https://play.google.com/store/apps/details?id=de.ozerov.fully) on Android.
+It doesn't work in Internet Explorer, latest Firefox has some issues, but Chrome and Chromium based browsers should be fine. I recommend [Fully](https://play.google.com/store/apps/details?id=de.ozerov.fully) on Android.
 
 ### Howto add an effect button
 
