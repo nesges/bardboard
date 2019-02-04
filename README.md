@@ -67,6 +67,21 @@ The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'S
             </ul>
         </div>
 ```
+## Troubleshooting
+
+### It doesn't work at all
+
+Bring up the browsers developer console by hitting F12. It should give you a hint what went wrong.
+
+### Volume sliders aren't displayed correctly
+
+![screenshot](screenshots/ff_vertical_slider.png?raw=true)
+
+If the volume sliders look like this, you're most likely using firefox to display bardboard. You have two options: ignore the issue, since you won't be using firefox on your actual bardboard-device. Or use Chrome/Chromium instead.
+
+### It takes forever to load
+
+Firefox seems to have some issues with loading the mp3 content. You have the same options as for the volume sliders. Which is: ignore the isser or use Chrome/Chromium.
 
 ## Screenshots
 
