@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <form>
+        <input type="file" id="asText">
+        <div id="textbox"></div>
+<script> 
+
+window.onload = function() {
+    let asText = document.getElementById('asText');
+    let textbox = document.getElementById('textbox');
+
+    asText.addEventListener('change', function(e) {
+        let file = asText.files[0,7,8];
+        let textType = /text.*/;
+
+        if (file.type.match(textType)) {
+            let reader = new FileReader();
+
+            reader.onload = function(e) {
+                textbox.innerText = reader.result;
+            }
+
+            reader.readAsText(file);    
+        } else {
+            textbox.innerText = "Dateityp "+file.type+" nicht unterstützt";
+        }
+    });
+}
+        </script>
+    </body>
+</html>

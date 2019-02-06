@@ -24,11 +24,11 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon"> 
     </head>
     <body>
-        <!-- to create a new tab, first create a <button> that calls tab(this, 'PAGEID')
+        <!-- to create a new tab, first create a <button class="tabbutton" name="PAGEID" and
              replace PAGEID with the actual ID of a <div id='PAGEID'> defined below -->
         <div class="tabs">
-            <button onClick="tab(this, 'pageFX')">      FX      </button>
-            <button onClick="tab(this, 'pageAmbient')"> Ambient </button>
+            <button class="tabbutton" name="pageFX">      FX      </button>
+            <button class="tabbutton" name="pageAmbient"> Ambient </button>
             <!-- you may place normal links here to e.g. a second bardboard -->
             <a href="demo2.html">Demo 2</a>
         </div>       

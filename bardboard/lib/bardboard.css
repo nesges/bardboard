@@ -48,6 +48,9 @@ input[type=range]{
     top:350px;
     height:60px;
     -webkit-transform:rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform:rotate(270deg);
+    transform:rotate(270deg);
     -webkit-appearance: none;
     width: 400px;
     height: 30px;
@@ -126,6 +129,11 @@ input[type=range]:focus {
     right:30px;
     z-index:10; 
 }
+.mutebutton:not(.nofloat) {
+    height:99px !important;
+    width:99px !important;
+}
+
 .nofloat {
     position:static !important;
     margin-right:-2px;
@@ -144,4 +152,16 @@ input[type=range]:focus {
 }
 .slider {
     z-index:10;
+}
+
+.volume.small {
+    transform: scale(0.6) !important;
+}
+
+.volume.tiny {
+    transform: scale(0.3) !important;
+}
+
+.trackplaying {
+    border:2px solid orange;
 }

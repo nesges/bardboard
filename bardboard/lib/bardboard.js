@@ -1,4 +1,10 @@
 function initialize() {   
+    // add click event to tab buttons
+    var elems = document.getElementsByClassName('tabbutton');
+    for(e = 0; e<elems.length; e++) {
+        elems[e].addEventListener('click', function() { tab(this) });
+    }
+    
     // create mute buttons
     var elems = document.getElementsByClassName('mutebutton');
     for(e = 0; e<elems.length; e++) {
@@ -103,6 +109,24 @@ function initialize() {
             
             // append audio to tab
             elems[e].closest('.tab').appendChild(img);
+        } else {
+            // audio elements on track pages
+            elems[e].addEventListener('play', function() { 
+                var tab = this.parentElement.parentElement;
+                var tabId = tab.getAttribute('id');
+                var buttons = document.getElementsByName(tabId);
+                for(b = 0; b<buttons.length; b++) {
+                    buttons[b].classList.add('trackplaying');
+                }
+            });
+            elems[e].addEventListener('pause', function() { 
+                var tab = this.parentElement.parentElement;
+                var tabId = tab.getAttribute('id');
+                var buttons = document.getElementsByName(tabId);
+                for(b = 0; b<buttons.length; b++) {
+                    buttons[b].classList.remove('trackplaying');
+                }
+            });
         }
     }
 
@@ -214,7 +238,10 @@ function volume(slider) {
         }
     }
 }
-function tab(button, id) {
+function tab(button, id='') {
+    if(!id) {
+        id = button.getAttribute('name');
+    }
     var elems = document.getElementsByClassName('tab');
     for(e = 0; e<elems.length; e++) {
         elems[e].style.display = 'none';

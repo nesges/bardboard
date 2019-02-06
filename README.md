@@ -48,7 +48,7 @@ The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'S
 
 ### Howto add a new tab
 
-* add a ```<button onClick="tab(this, 'PAGEID')">TITLE</button>``` element to ```<div class="tabs">``` and replace PAGEID with some unique term to identify the tab and TITLE with sine title that should be displayed (e.g. ```<button onClick="tab(this, 'pageFX')">FX</button>```)
+* add a ```<button class="tabbutton" name="PAGEID">TITLE</button>``` element to ```<div class="tabs">``` and replace PAGEID with some unique term to identify the tab and TITLE with some title that should be displayed (e.g. ```<button class="tabbutton" name="pageFX">FX</button>```)
 * if you want to add a new tab with effectbuttons add
 ```
         <div id="PAGEID" class="tab">
@@ -67,6 +67,15 @@ The play() function takes five parameters: ```play(this, 'FILENAME', 'TITLE', 'S
             </ul>
         </div>
 ```
+
+### Smaller volume sliders
+
+To make the volume sliders small or tiny just add the css classes **small** or **tiny** to the slider:
+
+```Normal: <div class="volume"></div>
+Small: <div class="volume small"></div>
+Tiny: <div class="volume tiny"></div>```
+
 ## Troubleshooting
 
 ### It doesn't work at all
