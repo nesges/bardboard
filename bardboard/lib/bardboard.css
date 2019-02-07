@@ -154,14 +154,31 @@ input[type=range]:focus {
     z-index:10;
 }
 
-.volume.small {
-    transform: scale(0.6) !important;
-}
-
-.volume.tiny {
-    transform: scale(0.3) !important;
-}
-
 .trackplaying {
     border:2px solid orange;
+}
+
+.mutebutton.small {
+    transform: scale(0.6) !important;
+    top:30px; 
+}
+.volume.small {
+    transform: scale(0.6) !important;
+    width:160px; 
+    height:600px; 
+    position:fixed; 
+    top:-80px; 
+    right:6px;
+}
+.mutebutton.tiny {
+    transform: scale(0.3) !important;
+    top:30px; 
+}
+.volume.tiny {
+    transform: scale(0.3) !important;
+    width:160px; 
+    height:600px; 
+    position:fixed; 
+    top:-140px; 
+    right:6px;
 }

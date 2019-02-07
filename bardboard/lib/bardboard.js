@@ -15,7 +15,7 @@ function initialize() {
     // select all audio tags
     var elems = document.getElementsByTagName('audio');
     for(e = 0; e<elems.length; e++) {
-        
+               
         // exclude all audio elements with the nofx class
         var nofx=0;
         var classes = elems[e].getAttribute('class');
@@ -25,6 +25,13 @@ function initialize() {
         var id = elems[e].getAttribute('id');
         
         if(id && !nofx) {
+            // alternative imagetitle used for alt and title attributes
+            var title = elems[e].innerHTML;
+            if(! title) {
+                title=id;
+            }
+            console.log(title);
+            
             // create a button image
             var img = document.createElement('img');
             img.id='img_' + id;
@@ -33,7 +40,8 @@ function initialize() {
             } else {
                 img.src='img/'+ id +'.jpg';
             }
-            img.setAttribute('alt', id);
+            img.setAttribute('alt', title);
+            img.setAttribute('title', title);
             img.setAttribute('onclick', 'toggleAudio(\''+ id +'\')');
             img.classList.add('fx');
             if(elems[e].getAttribute('loop') == 'true') {
