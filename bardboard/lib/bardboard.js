@@ -259,8 +259,10 @@ function tab(button, id='') {
     var buttons = document.getElementsByTagName('button');
     for(b = 0; b<buttons.length; b++) {
         buttons[b].style.zIndex = '1';
+        buttons[b].classList.remove('activebutton');
     }
     button.style.zIndex = '11';
+    button.classList.add('activebutton');
 }
 function play(elem, file, title, startat, stopat) {
     if(!title || title == 'undefined' || title == 'null') {
